@@ -28,7 +28,7 @@ Si prefieres compilar el paquete tú mismo, sigue estos pasos:
 
     Clona el repositorio de GitHub:
 
-git clone https://github.com/tu_usuario/archfetch.git
+git clone https://github.com/itteamlxs/archfetch.git
 cd archfetch
 
 Construye e instala el paquete usando makepkg:
