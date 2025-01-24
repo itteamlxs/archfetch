@@ -6,7 +6,6 @@ Este script es especialmente útil para los usuarios de Arch Linux que quieren u
 ## Características
 
 - Muestra información detallada sobre el sistema operativo, el kernel, la CPU, la memoria, los discos, las tarjetas gráficas, la red y el entorno de escritorio.
-- Todo se obtiene mediante comandos estándar de Linux, sin dependencias externas como `neofetch` o `inxi`.
 - Ligero y fácil de usar, ideal para terminales o scripts automáticos.
 - Compatible con distribuciones basadas en Arch Linux (y otras distribuciones que soporten los comandos estándar de Linux).
 
