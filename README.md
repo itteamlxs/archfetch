@@ -1,4 +1,4 @@
-#Archfetch
+# Archfetch
 
 **Archfetch** es un script de bash para mostrar información detallada sobre tu sistema operativo en Arch Linux. Es completamente independiente de herramientas como `neofetch` o `inxi`, y está diseñado para proporcionar detalles relevantes del sistema de manera eficiente y atractiva. 
 
