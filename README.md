@@ -22,7 +22,8 @@ Para instalar **Archfetch** en tu sistema Arch Linux, sigue estos pasos:
    ```bash
    yay -S archfetch
 Esto descargará e instalará el paquete directamente desde el AUR.
-Método 2: Compilar e instalar manualmente
+
+## Método 2: Compilar e instalar manualmente
 
 Si prefieres compilar el paquete tú mismo, sigue estos pasos:
 
@@ -52,6 +53,33 @@ El script mostrará la siguiente información:
     GPU: Información sobre las tarjetas gráficas.
     Red: Direcciones IP y interfaces de red.
     Entorno de escritorio: Si tienes un entorno de escritorio gráfico, lo mostrará.
+
+## Desinstalación
+
+Si deseas desinstalar **Archfetch**, puedes hacerlo de las siguientes maneras:
+
+### Si lo instalaste desde el AUR
+
+Usa tu AUR helper preferido, como `yay`, para eliminar **Archfetch**:
+
+```bash
+yay -Rns archfetch
+
+## Si lo instalaste manualmente
+
+Si compilaste e instalaste Archfetch manualmente, puedes eliminarlo de la siguiente manera:
+
+1. Elimina el script de Archfetch:
+
+```bash
+sudo rm /usr/bin/archfetch
+
+2. Elimina el directorio donde clonaste el repositorio (si lo deseas):
+
+```bash
+rm -rf ~/archfetch
+
+Con esto, habrás eliminado completamente Archfetch de tu sistema.
 
 Contribuciones
 
