@@ -1,7 +1,6 @@
 # Archfetch
 
-**Archfetch** es un script de bash para mostrar información detallada sobre tu sistema operativo en Arch Linux. Es completamente independiente de herramientas como `neofetch` o `inxi`, y está diseñado para proporcionar detalles relevantes del sistema de manera eficiente y atractiva. 
-
+**Archfetch** es un script de bash para mostrar información detallada sobre tu sistema operativo en Arch Linux.
 Este script es especialmente útil para los usuarios de Arch Linux que quieren una manera rápida y sencilla de ver información sobre su sistema.
 
 ## Características
@@ -73,7 +72,7 @@ Usa tu AUR helper preferido, como yay, para eliminar Archfetch:
    yay -Rns archfetch
    ```
 
-### Si lo instalaste manualmente
+Si lo instalaste manualmente
 
 Si compilaste e instalaste Archfetch manualmente, puedes eliminarlo de la siguiente manera:
 
