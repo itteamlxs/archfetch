@@ -21,52 +21,10 @@ Para instalar **Archfetch** en tu sistema Arch Linux, sigue estos pasos:
 
    ```bash
    yay -S archfetch
-Esto descargará e instalará el paquete directamente desde el AUR.
-
-## Método 2: Compilar e instalar manualmente
-
-Si prefieres compilar el paquete tú mismo, sigue estos pasos:
-
-    Clona el repositorio de GitHub:
-
-git clone https://github.com/itteamlxs/archfetch.git
-cd archfetch
-
-Construye e instala el paquete usando makepkg:
-
-    makepkg -si
-
-    Este comando construirá el paquete y lo instalará en tu sistema.
-
-Uso
-
-Una vez instalado, puedes ejecutar Archfetch desde la terminal con el siguiente comando:
-
-archfetch
-
-El script mostrará la siguiente información:
-
-    Sistema operativo: Distribución y versión del kernel.
-    CPU: Modelo de la CPU y número de núcleos.
-    Memoria: Total y usada de la memoria RAM.
-    Discos: Información sobre los discos y particiones.
-    GPU: Información sobre las tarjetas gráficas.
-    Red: Direcciones IP y interfaces de red.
-    Entorno de escritorio: Si tienes un entorno de escritorio gráfico, lo mostrará.
-
-## Desinstalación
-
-Si deseas desinstalar **Archfetch**, puedes hacerlo de las siguientes maneras:
-
-### Método 1: Si lo instalaste desde el AUR
-
-Usa tu AUR helper preferido, como `yay`, para eliminar **Archfetch**:
-
-   ```bash
-   yay -Rns archfetch
    ```
 
 Esto descargará e instalará el paquete directamente desde el AUR.
+
 
 ### Método 2: Compilar e instalar manualmente
 
@@ -81,7 +39,7 @@ Si prefieres compilar el paquete tú mismo, sigue estos pasos:
 
 2. Construye e instala el paquete usando makepkg:
 
-```bash
+   ```bash
    makepkg -si
    ```
 Este comando construirá el paquete y lo instalará en tu sistema.
@@ -90,9 +48,10 @@ Este comando construirá el paquete y lo instalará en tu sistema.
 
 Una vez instalado, puedes ejecutar Archfetch desde la terminal con el siguiente comando:
 
-```bash
+   ```bash
    archfetch
-```
+   ```
+
 El script mostrará la siguiente información:
 
     Sistema operativo: Distribución y versión del kernel.
@@ -110,9 +69,9 @@ Si lo instalaste desde el AUR
 
 Usa tu AUR helper preferido, como yay, para eliminar Archfetch:
 
-```bash
+   ```bash
    yay -Rns archfetch
-```
+   ```
 
 ### Si lo instalaste manualmente
 
@@ -125,6 +84,7 @@ Si compilaste e instalaste Archfetch manualmente, puedes eliminarlo de la siguie
    ```
 
 3. Elimina el directorio donde clonaste el repositorio (si lo deseas):
+   
    ```bash
       rm -rf ~/archfetch
    ```
