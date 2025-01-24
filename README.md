@@ -62,8 +62,8 @@ Si deseas desinstalar **Archfetch**, puedes hacerlo de las siguientes maneras:
 
 Usa tu AUR helper preferido, como `yay`, para eliminar **Archfetch**:
 
-```bash
-yay -Rns archfetch
+   ```bash
+   yay -Rns archfetch
 
 ## Si lo instalaste manualmente
 
@@ -76,8 +76,8 @@ sudo rm /usr/bin/archfetch
 
 2. Elimina el directorio donde clonaste el repositorio (si lo deseas):
 
-```bash
-rm -rf ~/archfetch
+   ```bash
+   rm -rf ~/archfetch
 
 Con esto, habrás eliminado completamente Archfetch de tu sistema.
 
