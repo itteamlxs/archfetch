@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Códigos de colores y formato
+BOLD=$(tput bold)
+RESET=$(tput sgr0)
+BLUE="\033[34m"
+GREEN="\033[32m"
+CYAN="\033[36m"
+YELLOW="\033[33m"
+RED="\033[31m"
+MAGENTA="\033[35m"
+WHITE="\033[37m"
+
+# Obtener los detalles del sistema
+OS=$(uname -o)
+HOSTNAME=$(hostname)
+KERNEL=$(uname -r)
+UPTIME=$(uptime -p)
+PACKAGES=$(pacman -Qq | wc -l)
+SHELL=$(basename "$SHELL") $(bash --version | head -n 1 | awk '{print $4}')
+RESOLUTION=$(xrandr | grep '*' | awk '{print $1}')
+DE=$(echo $XDG_CURRENT_DESKTOP)
+WM=$(wmctrl -m | grep Name | awk '{print $3}')
+THEME=$(gsettings get org.gnome.desktop.interface gtk-theme | tr -d "'")
+ICONS=$(gsettings get org.gnome.desktop.interface icon-theme | tr -d "'")
+TERMINAL=$(echo $TERM)
+CPU=$(lscpu | grep "Model name" | sed 's/Model name:[ ]*//')
+GPU=$(lspci | grep VGA | awk -F ': ' '{print $2}')
+MEMORY=$(free -h | grep Mem | awk '{print $3 " / " $2}')
+STORAGE=$(df -h / | tail -1 | awk '{print $3 " / " $2 " (" $5 " used)"}')
+
+# Mostrar la información combinada con colores y negrita
+echo -e "                   -\`                    ${BOLD}$USER@$HOSTNAME${RESET}"
+echo -e "                  .o+\`                   -------------------"
+echo -e "                 \`ooo/                   OS: ${BOLD}${CYAN}$OS${RESET}"
+echo -e "                \`+oooo:                  Host: ${BOLD}${BLUE}$HOSTNAME${RESET}"
+echo -e "               \`+oooooo:                 Kernel: ${BOLD}${GREEN}$KERNEL${RESET}"
+echo -e "                -+oooooo+:                Uptime: ${BOLD}${YELLOW}$UPTIME${RESET}"
+echo -e "             \`/:-:++oooo+:               Packages: ${BOLD}${RED}$PACKAGES (pacman)${RESET}"
+echo -e "            \`/++++/+++++++:              Shell: ${BOLD}${MAGENTA}$SHELL${RESET}"
+echo -e "           \`/++++++++++++++:             Resolution: ${BOLD}${BLUE}$RESOLUTION${RESET}"
+echo -e "         \`/+++ooooooooooooo/\`           DE: ${BOLD}${CYAN}$DE${RESET}"
+echo -e "         ./ooosssso++osssssso+\`          WM: ${BOLD}${GREEN}$WM${RESET}"
+echo -e "       .oossssso-\`\`\`/ossssss+\`         Theme: ${BOLD}${YELLOW}$THEME [GTK2/3]${RESET}"
+echo -e "      -osssssso.      :ssssssso.        Icons: ${BOLD}${YELLOW}$ICONS [GTK2/3]${RESET}"
+echo -e "    :osssssss/        osssso+++.       Terminal: ${BOLD}${MAGENTA}$TERMINAL${RESET}"
+echo -e "   /ossssssss/        +ssssooo/-       CPU: ${BOLD}${GREEN}$CPU${RESET}"
+echo -e "  \`/ossssso+/:-        -:/+osssso+-     GPU: ${BOLD}${CYAN}$GPU${RESET}"
+echo -e " \`+sso+:-\`                 \`.-/+oso:    Memory: ${BOLD}${GREEN}$MEMORY${RESET}"
+echo -e " \`++:.                           \`-/+/   Storage: ${BOLD}${RED}$STORAGE${RESET}"
+echo -e " .\`                                 \`/"
